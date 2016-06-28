@@ -10,10 +10,5 @@ type alias Model =
 
 initialModel : Model
 initialModel =
-    {- it is hardcoded for now -}
-    { players =
-        [ Player 1 "Sam" 1
-        , Player 2 "Joanna" 1
-        , Player 3 "John Doe with a long name" 2
-        ]
+    { players = []
     }
