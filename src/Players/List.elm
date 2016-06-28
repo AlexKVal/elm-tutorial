@@ -43,5 +43,5 @@ playerRow player =
         [ td [] [ text (toString player.id) ]
         , td [] [ text player.name ]
         , td [] [ text (toString player.level) ]
-        , td [] []
+        , td [] [ text "<placeholder>" ]
         ]
