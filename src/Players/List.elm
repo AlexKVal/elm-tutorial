@@ -48,7 +48,7 @@ playerRow player =
         ]
 
 
-editBtn : Player -> Html.Html Msg
+editBtn : Player -> Html Msg
 editBtn player =
     button [ class "btn regular", onClick (ShowPlayer player.id) ]
         [ i [ class "fa fa-pencil mr1" ] [], text "Edit" ]
