@@ -34,20 +34,22 @@ formLevel player =
         [ div [ class "col col-5" ] [ text "Level" ]
         , div [ class "col col-7" ]
             [ span [ class "h2 bold" ] [ text (toString player.level) ]
-            , btnLevelDecrease
-            , btnLevelIncrease
+            , btnLevelDecrease player
+            , btnLevelIncrease player
             ]
         ]
 
 
-btnLevelDecrease : Html.Html Msg
-btnLevelDecrease =
-    a [ class "btn ml1 h1" ] [ i [ class "fa fa-minus-circle" ] [] ]
+btnLevelDecrease : Player -> Html.Html Msg
+btnLevelDecrease player =
+    a [ class "btn ml1 h1", onClick (ChangeLevel player.id -1) ]
+        [ i [ class "fa fa-minus-circle" ] [] ]
 
 
-btnLevelIncrease : Html.Html Msg
-btnLevelIncrease =
-    a [ class "btn ml1 h1" ] [ i [ class "fa fa-plus-circle" ] [] ]
+btnLevelIncrease : Player -> Html.Html Msg
+btnLevelIncrease player =
+    a [ class "btn ml1 h1", onClick (ChangeLevel player.id 1) ]
+        [ i [ class "fa fa-plus-circle" ] [] ]
 
 
 listBtn : Html Msg
